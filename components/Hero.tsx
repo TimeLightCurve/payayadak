@@ -3,18 +3,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ChevronDown } from 'lucide-react';
-import NeonTrails from '@/components/neon/NeonTrails';
-import WireframeTruck from '@/components/neon/WireframeTruck';
+import TruckImageShowcase from '@/components/neon/TruckImageShowcase';
 
 export default function Hero() {
   const [toast, setToast] = useState<string | null>(null);
 
   return (
-    <section className="relative flex min-h-[100svh] flex-col overflow-hidden pt-[4.5rem] pb-8 sm:pt-20 sm:pb-10">
-      <NeonTrails />
+    <section className="hero-night relative flex min-h-[100svh] flex-col overflow-hidden pt-[4.5rem] pb-8 sm:pt-20 sm:pb-10">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_46%,rgba(21,78,141,.26),transparent_43%)]" />
 
       <div className="relative z-10 mx-auto flex w-full min-w-0 max-w-7xl flex-1 flex-col px-3 sm:px-6 lg:px-8">
-        <div className="mt-2 max-w-xl text-start sm:mt-4 md:mt-8">
+        <div className="mt-2 max-w-2xl text-start sm:mt-4 md:mt-8">
           <p className="mb-2 text-xs tracking-wide text-white/55 sm:mb-3 sm:text-sm">
             شرکت تجارت بین‌المللی پایا یدک
           </p>
@@ -29,8 +28,8 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="relative my-4 flex min-h-0 flex-1 items-center justify-center sm:my-6 md:my-8">
-          <WireframeTruck
+        <div className="relative -mx-3 my-4 flex flex-none items-center justify-center sm:mx-0 sm:my-6 sm:min-h-0 sm:flex-1 md:my-8">
+          <TruckImageShowcase
             onAddPart={(id) => {
               setToast(`قطعه ${id} به سبد اضافه شد`);
               window.setTimeout(() => setToast(null), 2200);

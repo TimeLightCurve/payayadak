@@ -6,10 +6,10 @@ import { Menu, X, ShoppingCart, User, Search, ChevronDown } from 'lucide-react';
 import { useAuthStore } from '@/lib/store';
 
 const navLinks = [
+  { href: '/', label: 'صفحه اصلی' },
   { href: '/products', label: 'محصولات' },
-  { href: '/products', label: 'برندها' },
-  { href: '/products', label: 'درباره ما' },
-  { href: '/products', label: 'تماس با ما' },
+  { href: '/#categories', label: 'دسته‌بندی قطعات' },
+  { href: '/contact', label: 'ارتباط با ما' },
 ];
 
 export default function Navbar() {
@@ -86,25 +86,28 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="border-t border-white/10 bg-[rgba(6,11,39,0.98)] px-4 py-4">
-          <div className="mx-auto max-w-7xl space-y-1">
-            {navLinks.map((l) => (
-              <Link
-                key={l.label}
-                href={l.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block border-b border-white/10 py-3 text-lg text-white transition-smooth hover:text-[var(--neon-orange)]"
-              >
-                {l.label}
-              </Link>
-            ))}
+        <div className="border-t border-white/10 bg-[rgba(6,11,39,0.98)] px-4 py-5">
+          <div className="mx-auto max-w-7xl">
+            <p className="mb-3 text-xs tracking-widest text-white/35">منوی پایا یدک</p>
+            <div className="space-y-1">
+              {navLinks.map((l) => (
+                <Link
+                  key={l.label}
+                  href={l.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block border-b border-white/10 py-3 text-lg text-white transition-smooth hover:text-[var(--neon-orange)]"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
             {!isAuthenticated && (
               <Link
-                href="/login"
+                href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-3 inline-flex bg-[var(--neon-orange)] px-4 py-2.5 text-sm font-semibold text-white"
               >
-                ورود / ثبت‌نام
+                درخواست مشاوره
               </Link>
             )}
           </div>

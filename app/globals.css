@@ -180,6 +180,41 @@ body {
   overflow: visible;
 }
 
+/* Demo hero: blend the supplied truck artwork into the navy canvas. */
+.hero-night {
+  background:
+    linear-gradient(180deg, rgba(5, 11, 38, 0.18), rgba(3, 6, 24, 0.94)),
+    radial-gradient(circle at 50% 48%, #0b2b59 0%, #071431 42%, #030618 78%);
+}
+
+.truck-image-composite {
+  overflow: hidden;
+  isolation: isolate;
+  filter: saturate(1.08) contrast(1.06);
+  -webkit-mask-image: radial-gradient(
+    ellipse 82% 78% at 50% 52%,
+    #000 48%,
+    rgba(0, 0, 0, 0.92) 66%,
+    rgba(0, 0, 0, 0.22) 88%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 82% 78% at 50% 52%,
+    #000 48%,
+    rgba(0, 0, 0, 0.92) 66%,
+    rgba(0, 0, 0, 0.22) 88%,
+    transparent 100%
+  );
+}
+
+.truck-image-composite::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  box-shadow: inset 0 0 64px 34px rgba(3, 6, 24, 0.88);
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--navy-900); }
 ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 9999px; }

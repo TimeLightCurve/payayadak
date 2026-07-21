@@ -27,10 +27,10 @@ export default function Footer() {
             <h3 className="mb-4 font-bold text-white">دسترسی سریع</h3>
             <ul className="space-y-2">
               {[
+                { href: '/', label: 'صفحه اصلی' },
                 { href: '/products', label: 'محصولات' },
-                { href: '/products', label: 'برندها' },
-                { href: '/products', label: 'درباره ما' },
-                { href: '/products', label: 'تماس با ما' },
+                { href: '/#categories', label: 'دسته‌بندی‌ها' },
+                { href: '/contact', label: 'ارتباط با ما' },
               ].map((l) => (
                 <li key={l.label}>
                   <Link
@@ -49,8 +49,8 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { href: '/products', label: 'درخواست قیمت' },
-                { href: '/products', label: 'سفارشات' },
-                { href: '/products', label: 'ردیابی سفارش' },
+                { href: '/products?category=engine', label: 'قطعات موتور' },
+                { href: '/products?category=brake', label: 'قطعات ترمز' },
               ].map((l) => (
                 <li key={l.label}>
                   <Link
