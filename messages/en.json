@@ -1,0 +1,45 @@
+{
+  "brand": {
+    "name": "Paya Yadak",
+    "fullName": "Paya Yadak International Trading Co. Ltd.",
+    "tagline": "Specialized supplier of Isuzu spare parts"
+  },
+  "nav": {
+    "products": "Products",
+    "brands": "Brands",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "login": "Login / Register"
+  },
+  "hero": {
+    "title_1": "The specialist source for",
+    "title_2": "Isuzu Spare Parts",
+    "subtitle": "Distribution of genuine Isuzu truck and light-truck parts across Iran\nwith authenticity guarantee and fast delivery",
+    "cta_primary": "Browse Products",
+    "cta_secondary": "Request a Quote",
+    "feature_1_title": "Genuine Parts",
+    "feature_1_desc": "Original, standard-compliant parts with a valid warranty",
+    "feature_2_title": "Expert Support",
+    "feature_2_desc": "Technical advice from heavy-vehicle parts specialists",
+    "feature_3_title": "Fast Delivery",
+    "feature_3_desc": "Nationwide shipping with order tracking"
+  },
+  "categories": {
+    "title": "Part Categories",
+    "subtitle": "A full range of Isuzu engine, drivetrain and body spare parts"
+  },
+  "brands": {
+    "title": "Supported Brands",
+    "subtitle": "Genuine, high-quality parts for heavy and medium-duty fleets"
+  },
+  "footer": {
+    "about": "Supply and distribution of genuine Isuzu spare parts for trucks across Iran.",
+    "quick_links": "Quick Links",
+    "services": "Services",
+    "rfq": "Request a Quote",
+    "orders": "Orders",
+    "tracking": "Order Tracking",
+    "contact": "Contact Us",
+    "rights": "© 2025 Paya Yadak. All rights reserved."
+  }
+}
