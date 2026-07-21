@@ -4,7 +4,7 @@ import ProductGrid from '@/components/ProductGrid';
 
 export const metadata = {
   title: 'محصولات | پایا یدک',
-  description: 'کاتالوگ قطعات یدکی ایسوزو — جستجو و فیلتر بر اساس دسته و برند.',
+  description: 'کاتالوگ قطعات یدکی ایسوزو. جستجو و فیلتر بر اساس دسته و برند.',
 };
 
 export default async function ProductsPage({
@@ -22,7 +22,7 @@ export default async function ProductsPage({
           <h1 className="mb-2 text-3xl font-extrabold text-white md:text-4xl">
             کاتالوگ محصولات
           </h1>
-          <p className="text-white/60">قطعات یدکی اصلی ایسوزو — کامیونت و کامیون</p>
+          <p className="text-white/60">قطعات یدکی اصلی ایسوزو، کامیونت و کامیون</p>
         </div>
         <ProductGrid initialCategory={category} initialBrand={brand} />
       </section>

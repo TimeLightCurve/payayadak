@@ -40,12 +40,12 @@ export default function Navbar() {
         </Link>
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center bg-[var(--neon-orange)]">
+        <Link href="/" className="flex min-w-0 items-center gap-1.5 sm:gap-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center bg-[var(--neon-orange)]">
             <span className="text-sm font-extrabold text-white">پ</span>
           </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-sm font-extrabold tracking-wide text-white sm:text-base">
+          <div className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate text-sm font-extrabold tracking-wide text-white sm:text-base">
               پایا یدک
             </span>
             <span className="hidden text-[9px] text-white/55 sm:block">قطعات یدکی ایسوزو</span>

@@ -6,7 +6,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1001',
     name_fa: 'دیسک و صفحه کلاچ ایسوزو ۶ تن',
-    name_en: 'Clutch Disc & Plate — Isuzu 6t',
+    name_en: 'Clutch Disc & Plate · Isuzu 6t',
     category: 'transmission',
     brand: 'isuzu',
     part_number: 'ISZ-CL-600',
@@ -21,7 +21,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1002',
     name_fa: 'واتر پمپ موتور ایسوزو',
-    name_en: 'Engine Water Pump — Isuzu',
+    name_en: 'Engine Water Pump · Isuzu',
     category: 'cooling',
     brand: 'isuzu',
     part_number: 'ISZ-WP-410',
@@ -36,7 +36,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1003',
     name_fa: 'لنت ترمز جلو کامیونت ایسوزو',
-    name_en: 'Front Brake Pads — Isuzu Truck',
+    name_en: 'Front Brake Pads · Isuzu Truck',
     category: 'brake',
     brand: 'isuzu',
     part_number: 'ISZ-BP-220',
@@ -50,7 +50,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1004',
     name_fa: 'فیلتر روغن موتور ایسوزو',
-    name_en: 'Engine Oil Filter — Isuzu',
+    name_en: 'Engine Oil Filter · Isuzu',
     category: 'filters',
     brand: 'isuzu',
     part_number: 'ISZ-OF-090',
@@ -64,7 +64,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1005',
     name_fa: 'کمک فنر عقب زیربندی ایسوزو',
-    name_en: 'Rear Shock Absorber — Isuzu',
+    name_en: 'Rear Shock Absorber · Isuzu',
     category: 'undercarriage',
     brand: 'isuzu',
     part_number: 'ISZ-SA-330',
@@ -78,7 +78,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1006',
     name_fa: 'بلبرینگ کلاچ ایسوزو',
-    name_en: 'Clutch Release Bearing — Isuzu',
+    name_en: 'Clutch Release Bearing · Isuzu',
     category: 'transmission',
     brand: 'isuzu',
     part_number: 'ISZ-RB-115',
@@ -92,7 +92,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1007',
     name_fa: 'سینی جلو (سینه فلزی) بدنه ایسوزو',
-    name_en: 'Front Panel (Body) — Isuzu',
+    name_en: 'Front Panel (Body) · Isuzu',
     category: 'body',
     brand: 'isuzu',
     part_number: 'ISZ-FP-701',
@@ -106,7 +106,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1008',
     name_fa: 'دینام (آلترناتور) ایسوزو',
-    name_en: 'Alternator — Isuzu',
+    name_en: 'Alternator · Isuzu',
     category: 'electrical',
     brand: 'isuzu',
     part_number: 'ISZ-ALT-24',
@@ -134,7 +134,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1010',
     name_fa: 'پمپ انژکتور (سوخت‌رسانی) ایسوزو',
-    name_en: 'Fuel Injection Pump — Isuzu',
+    name_en: 'Fuel Injection Pump · Isuzu',
     category: 'fuel',
     brand: 'isuzu',
     part_number: 'ISZ-FIP-900',
@@ -148,7 +148,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1011',
     name_fa: 'کاسه‌نمد و بلبرینگ چرخ ایسوزو',
-    name_en: 'Wheel Hub Seal & Bearing — Isuzu',
+    name_en: 'Wheel Hub Seal & Bearing · Isuzu',
     category: 'differential',
     brand: 'isuzu',
     part_number: 'ISZ-WH-140',
@@ -162,7 +162,7 @@ export const sampleParts: Part[] = [
   {
     id: 'p-1012',
     name_fa: 'رادیاتور آب ایسوزو',
-    name_en: 'Radiator — Isuzu',
+    name_en: 'Radiator · Isuzu',
     category: 'cooling',
     brand: 'isuzu',
     part_number: 'ISZ-RAD-500',
