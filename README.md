@@ -18,11 +18,12 @@ rebranded for the automotive spare-parts domain.
 
 ## Design system
 
-- Liquid-glass surfaces (`.glass`, `.glass-strong`)
-- Golden-ratio (φ = 1.618) spacing scale
+- Madar-inspired deep navy + neon orange/blue palette
+- WebGPU neon light-trail hero (Canvas2D fallback)
+- SVG wireframe Isuzu camion with interactive part hotspots
+- Liquid-glass surfaces on dark backgrounds
 - Fitts's-Law touch targets (44px minimum) — mobile-first
-- Isuzu brand palette: red (`#d81f26`) accent on slate/charcoal
-- Custom cursor on pointer-fine devices, disabled on touch
+- Vazirmatn Persian webfont; RTL-first
 
 ## Getting started
 
