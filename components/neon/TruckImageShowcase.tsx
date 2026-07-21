@@ -45,9 +45,8 @@ export default function TruckImageShowcase({ onAddPart }: Props) {
           fill
           priority
           sizes="(max-width: 768px) 100vw, 900px"
-          className="object-cover object-center"
+          className="truck-image-art object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_55%,transparent_30%,rgba(3,6,24,.12)_62%,rgba(3,6,24,.88)_100%)]" />
       </div>
 
       <div className="pointer-events-none absolute inset-x-[8%] bottom-[8%] h-px bg-gradient-to-r from-transparent via-[#3aa0ff]/70 to-transparent shadow-[0_0_16px_#3aa0ff]" />
