@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Send, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -29,6 +29,8 @@ export default function Footer() {
               {[
                 { href: '/', label: 'صفحه اصلی' },
                 { href: '/products', label: 'محصولات' },
+                { href: '/special-order', label: 'سفارش ویژه و فوری' },
+                { href: '/en', label: 'English' },
                 { href: '/#categories', label: 'دسته‌بندی‌ها' },
                 { href: '/contact', label: 'ارتباط با ما' },
               ].map((l) => (
@@ -49,6 +51,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { href: '/products', label: 'درخواست قیمت' },
+                { href: '/special-order', label: 'تأمین خارجی و حمل هوایی' },
                 { href: '/products?category=engine', label: 'قطعات موتور' },
                 { href: '/products?category=brake', label: 'قطعات ترمز' },
               ].map((l) => (
@@ -80,6 +83,23 @@ export default function Footer() {
                 <span>تهران، ایران</span>
               </li>
             </ul>
+            <div className="mt-5 flex items-center gap-2" aria-label="شبکه‌های اجتماعی">
+              {[
+                { label: 'Instagram', icon: Instagram },
+                { label: 'Telegram', icon: Send },
+                { label: 'WhatsApp', icon: MessageCircle },
+              ].map(({ label, icon: Icon }) => (
+                <a
+                  key={label}
+                  href="#"
+                  title={`${label} — لینک نهایی در جلسه تأیید می‌شود`}
+                  aria-label={label}
+                  className="glass inline-flex h-10 w-10 items-center justify-center text-white/70 transition-smooth hover:text-[var(--neon-orange)]"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 

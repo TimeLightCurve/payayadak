@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Plane } from 'lucide-react';
 import TruckImageShowcase from '@/components/neon/TruckImageShowcase';
 
 export default function Hero() {
@@ -23,8 +23,8 @@ export default function Hero() {
             <span className="text-white">قطعات یدکی ایسوزو</span>
           </h1>
           <p className="mt-3 max-w-lg text-[0.8125rem] leading-relaxed text-white/65 sm:mt-4 sm:text-base">
-            روی نقاط درخشان کامیون بزنید؛ نام قطعه، شماره فنی و قیمت به تومان را ببینید و
-            مستقیم به سبد اضافه کنید.
+            قطعه سازگار با کامیونت و کامیون نیمه‌سنگین ایسوزو را پیدا کنید؛ موجودی، کیفیت
+            و زمان تحویل را ببینید یا برای قطعات حساس از کارشناس کمک بگیرید.
           </p>
         </div>
 
@@ -51,11 +51,11 @@ export default function Hero() {
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
             </Link>
             <Link
-              href="/products"
+              href="/special-order"
               className="inline-flex min-h-11 items-center justify-center gap-1 border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-smooth hover:bg-white/10"
             >
-              شروع کنید
-              <ChevronDown className="h-4 w-4" />
+              تأمین ویژه و فوری
+              <Plane className="h-4 w-4" />
             </Link>
           </div>
         </div>
