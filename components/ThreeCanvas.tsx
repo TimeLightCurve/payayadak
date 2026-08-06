@@ -53,7 +53,7 @@ export function ThreeCanvas() {
   const compact = useIsCompact()
   const camera = useMemo(
     () => ({
-      position: compact ? ([4, 0.4, 12] as const) : ([5, 2.2, 11] as const),
+      position: compact ? ([4, 0.4, 12] as const) : ([5, 1.2, 11] as const),
       fov: compact ? 35 : 28,
     }),
     [compact],
@@ -62,7 +62,7 @@ export function ThreeCanvas() {
   const resetCamera = useCallback(
     (smooth = true) => {
       const position: [number, number, number] = compact ? [4, 0.4, 15] : [1, 2.8, 9]
-      const target: [number, number, number] = [0.4, 0.25, -2]
+      const target: [number, number, number] = [0.4, 0.25, -1]
 
       void controls.current?.setLookAt(
         position[0],
@@ -147,24 +147,25 @@ export function ThreeCanvas() {
 
         <Isuzu
           scale={1.6}
-          position={[-1, -1.15, -2]}
+          position={[-1, -1.65, -2]}
           activePartId={activePart?.id}
           onFocusPart={focusPart}
         />
         {/* <directionalLight position={[10, 10, 5]} intensity={1.5} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} /> */}
 
         <AccumulativeShadows
-          position={[0, -1.16, 0]}
-          frames={compact || degraded ? 1 : 12}
+          position={[-5, -1.66, 0]}
+          frames={compact || degraded ? 1 : 20}
           resolution={compact || degraded ? 256 : 512}
           alphaTest={1}
           scale={30}
+
         >
           <RandomizedLight
-            amount={compact || degraded ? 1 : 3}
+            amount={compact || degraded ? 1 : 5}
             radius={5}
             ambient={0.8}
-            position={[1, 5, -1]}
+            position={[1, 8, -1]}
           />
         </AccumulativeShadows>
 
@@ -175,10 +176,11 @@ export function ThreeCanvas() {
           resolution={degraded ? 64 : 128}
         /> */}
         <Environment
-          preset="city"
-          environmentIntensity={1.4}
-          blur={0.8}
-          // resolution={degraded ? 64 : 128}
+          preset="sunset"
+          environmentIntensity={1.2}
+          blur={0.3}
+          resolution={degraded ? 64 : 128}
+          environmentRotation={[0, Math.PI / 7, Math.PI / 1]}
         />
       </Canvas>
 
@@ -200,16 +202,38 @@ export function ThreeCanvas() {
         </div>
       )
       : (
-        <div className="pointer-events-none absolute inset-x-0 top-50 font-nian font-black z-50 flex flex-col justify-start px-16">
-         <h1 className="pointer-events-none flex items-center gap-3 p-2 ps-4 text-white  text-7xl max-w-3xl leading-relaxed">
-              مرجع تخصصی
-              <br />
-              قطعات یدکی ایسوزو
-         </h1>
-         <p className="pointer-events-none flex items-center gap-3 p-2 ps-4 text-white/70 text-lg max-w-xl leading-relaxed">
-              قطعه سازگار با کامیونت و کامیون نیمه‌سنگین ایسوزو را پیدا کنید؛ موجودی، کیفیت و زمان تحویل را ببینید یا برای قطعات حساس از کارشناس کمک بگیرید
-         </p>
-        </div>
+        <>
+          <div className="pointer-events-none absolute inset-x-0 top-50 font-nian font-black z-50 flex flex-col justify-start px-16 ">
+          <h1 className="pointer-events-none flex items-center gap-3 p-2 ps-4 text-white  text-7xl max-w-3xl leading-relaxed">
+                مرجع تخصصی
+                <br />
+                قطعات یدکی ایسوزو
+          </h1>
+          <p className="pointer-events-none flex items-center gap-3 p-2 ps-4 text-white/70 text-lg max-w-xl leading-relaxed">
+                قطعه سازگار با کامیونت و کامیون نیمه‌سنگین ایسوزو را پیدا کنید؛ موجودی، کیفیت و زمان تحویل را ببینید یا برای قطعات حساس از کارشناس کمک بگیرید
+          </p>
+          </div>
+          <div className="pointer-events-none absolute flex flex-col inset-x-0 bottom-20 z-20 flex justify-start px-16 font-nian">
+            <p className="pointer-events-auto max-w-3xl text-right text-xl text-white/45">
+                نمایندگی و توزیع قطعات اصلی کامیونت و کامیون ایسوزو. اصالت کالا، مشاوره فنی، ارسال سریع به سراسر ایران.
+            </p>
+            <div className="pointer-events-auto mt-4 flex gap-3">
+                <a
+                  href="/products"
+                  className="group inline-flex min-h-11 items-center justify-center gap-2 bg-[var(--neon-orange)] px-5 py-3 text-sm font-semibold text-white transition-smooth hover:brightness-110"
+                >
+                  مشاهده محصولات
+                </a>
+                <a
+                  href="/special-order"
+                  className="inline-flex min-h-11 items-center justify-center gap-1 border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-smooth hover:bg-white/10"
+                >
+                  تأمین ویژه و فوری
+                </a>
+            </div>
+          </div>
+         
+        </>
       )
     }
     </div>

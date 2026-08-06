@@ -12,7 +12,7 @@ export default function Home() {
       <div className=" flex w-screen h-screen">
         <ThreeCanvas />
       </div>
-      <Hero />
+      {/* <Hero /> */}
       <PartCategories />
       <Brands />
       <Footer />
