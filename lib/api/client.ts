@@ -1,7 +1,8 @@
 import axios, { AxiosInstance, AxiosError, InternalAxiosRequestConfig } from 'axios';
 
 // API Configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.payayadak.com';
+// Demo / pre-backend: leave unset so landing works without a live API.
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 // Create axios instance
 const apiClient: AxiosInstance = axios.create({

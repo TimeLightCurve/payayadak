@@ -28,10 +28,12 @@ rebranded for the automotive spare-parts domain.
 ## Getting started
 
 ```bash
-cp .env.example .env    # set NEXT_PUBLIC_API_URL
+cp .env.example .env.local   # leave NEXT_PUBLIC_API_URL empty for landing demo
 npm install --legacy-peer-deps
 npm run dev             # http://localhost:3000
 ```
+
+Landing demo runs without a backend. Set `NEXT_PUBLIC_API_URL` only after the API exists.
 
 ### Docker
 
@@ -68,4 +70,4 @@ locale-routing rollout.
 Product images use category glyph placeholders. Replace `image_url` on each
 part (and the seed data in `lib/data/sampleParts.ts`) with real product
 photography before launch. The seed catalog is served client-side until the
-backend catalog service is connected via `NEXT_PUBLIC_API_URL`.
+Landing demo uses sample catalog data. Wire `NEXT_PUBLIC_API_URL` only when a backend exists.

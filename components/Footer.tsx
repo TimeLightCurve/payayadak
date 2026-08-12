@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Instagram, Send, MessageCircle } from 'lucide-reac
 
 export default function Footer() {
   return (
-    <footer className="mt-8 border-t border-white/10 bg-[rgba(3,6,24,0.85)]">
+    <footer className="mt-8 border-t border-white/10 bg-[rgba(3,6,24,0.85)] font-nian">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-1">
@@ -18,7 +18,7 @@ export default function Footer() {
                 <span className="text-[10px] text-white/50">قطعات یدکی ایسوزو</span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-base leading-relaxed text-white/60">
               تأمین و توزیع قطعات یدکی اصلی ایسوزو برای کامیونت و کامیون در سراسر ایران.
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/60 transition-smooth hover:text-[var(--neon-orange)]"
+                    className="text-base text-white/60 transition-smooth hover:text-[var(--neon-orange)]"
                   >
                     {l.label}
                   </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/60 transition-smooth hover:text-[var(--neon-orange)]"
+                    className="text-base text-white/60 transition-smooth hover:text-[var(--neon-orange)]"
                   >
                     {l.label}
                   </Link>
@@ -70,15 +70,15 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-bold text-white">تماس با ما</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-sm text-white/60">
+              <li className="flex items-center gap-2 text-base text-white/60">
                 <Phone className="h-4 w-4 text-[var(--neon-orange)]" />
                 <span dir="ltr">021-000 000 00</span>
               </li>
-              <li className="flex items-center gap-2 text-sm text-white/60">
+              <li className="flex items-center gap-2 text-base text-white/60">
                 <Mail className="h-4 w-4 text-[var(--neon-orange)]" />
                 <span dir="ltr">info@payayadak.com</span>
               </li>
-              <li className="flex items-center gap-2 text-sm text-white/60">
+              <li className="flex items-center gap-2 text-base text-white/60">
                 <MapPin className="h-4 w-4 text-[var(--neon-orange)]" />
                 <span>تهران، ایران</span>
               </li>
@@ -104,7 +104,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-8 text-center">
-          <p className="text-sm text-white/50">© ۱۴۰۴ پایا یدک. تمامی حقوق محفوظ است.</p>
+          <p className="text-base text-white/50">© ۱۴۰۴ پایا یدک. تمامی حقوق محفوظ است.</p>
         </div>
       </div>
     </footer>

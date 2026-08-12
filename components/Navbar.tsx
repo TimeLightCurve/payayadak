@@ -26,15 +26,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-        isScrolled ? 'bg-[rgba(6,11,39,0.92)] backdrop-blur-md' : 'bg-[rgba(6,11,39,0.55)] backdrop-blur-sm'
+      className={`fixed top-0 left-0 right-0 z-90 font-nian transition-smooth ${
+        isScrolled ? 'bg-[#060b27eb]/40 backdrop-blur-xl' : 'bg-[#060b278c]/40 backdrop-blur-lg'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-2 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-4 sm:px-6">
         {/* Madar-style primary CTA */}
         <Link
           href="/special-order"
-          className="inline-flex shrink-0 items-center gap-1 bg-[var(--neon-orange)] px-3 py-2.5 text-xs font-semibold text-white sm:px-4 sm:text-sm"
+          className="inline-flex shrink-0 items-center gap-1  px-3 py-2.5 text-sm font-semibold text-white sm:px-4 sm:text-lg"
         >
           سفارش فوری
           <Zap className="h-3.5 w-3.5" />
@@ -46,10 +46,10 @@ export default function Navbar() {
             <span className="text-sm font-extrabold text-white">پ</span>
           </div>
           <div className="flex min-w-0 flex-col leading-tight">
-            <span className="truncate text-sm font-extrabold tracking-wide text-white sm:text-base">
+            <span className="truncate text-base font-extrabold tracking-wide text-white sm:text-lg">
               پایا یدک
             </span>
-            <span className="hidden text-[9px] text-white/55 sm:block">قطعات یدکی ایسوزو</span>
+            <span className="hidden text-base text-white/55 sm:block">قطعات یدکی ایسوزو</span>
           </div>
         </Link>
 
@@ -57,9 +57,9 @@ export default function Navbar() {
           <Link
             href="/en"
             aria-label="English"
-            className="inline-flex items-center gap-1 px-2 py-2 text-xs font-semibold text-white/80 transition-smooth hover:text-[var(--neon-orange)]"
+            className="inline-flex items-center gap-1 px-2 py-2 text-lg font-semibold text-white/80 transition-smooth hover:text-[var(--neon-orange)]"
           >
-            <Languages className="h-4 w-4" />
+            <Languages className="h-6 w-6" />
             EN
           </Link>
           <Link
@@ -95,7 +95,7 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="border-t border-white/10 bg-[rgba(6,11,39,0.98)] px-4 py-5">
+        <div className="border-t border-white/10 bg-[#060b27fa]/20 backdrop-blur-xl px-4 py-5">
           <div className="mx-auto max-w-7xl">
             <p className="mb-3 text-xs tracking-widest text-white/35">منوی پایا یدک</p>
             <div className="space-y-1">

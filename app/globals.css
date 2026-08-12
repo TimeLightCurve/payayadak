@@ -25,11 +25,11 @@
   --spacing-golden-xl: 2.618rem;
   --spacing-golden-2xl: 4.236rem;
 
-  --animate-neon-pulse: neon-pulse 2.4s ease-in-out infinite;
+  /* --animate-neon-pulse: neon-pulse 2.4s ease-in-out infinite;
   --animate-float: float 7s ease-in-out infinite;
-  --animate-shape-pulse: shape-pulse 3s ease-in-out infinite;
+  --animate-shape-pulse: shape-pulse 3s ease-in-out infinite; */
 
-  @keyframes neon-pulse {
+  /* @keyframes neon-pulse {
     0%, 100% {
       box-shadow: 0 0 0 0 rgb(255 255 255 / 45%), 0 0 12px rgb(58 160 255 / 50%);
       transform: scale(1);
@@ -48,7 +48,7 @@
   @keyframes shape-pulse {
     0%, 100% { opacity: 0.45; }
     50% { opacity: 0.9; }
-  }
+  } */
 }
 
 @theme inline {
@@ -59,6 +59,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    min-height: 100%;
+    background-color: #03072f;
+    color-scheme: dark;
   }
 
   html,
@@ -70,26 +73,39 @@
 
   body {
     min-height: 100vh;
-    background:
-      radial-gradient(900px 500px at 50% 20%, rgb(58 160 255 / 12%), transparent 55%),
-      radial-gradient(700px 400px at 80% 80%, rgb(232 98 61 / 10%), transparent 50%),
-      linear-gradient(180deg, var(--color-navy-800) 0%, var(--color-navy-900) 45%, var(--color-navy-950) 100%);
+    min-height: 100svh;
+    background-color: #03072f;
+    background-image:
+      radial-gradient(circle at 74% 24%, rgb(45 73 219 / 40%), transparent 31%),
+      radial-gradient(circle at 42% 78%, rgb(255 98 72 / 18%), transparent 28%),
+      linear-gradient(125deg, #03072f 0%, #080d4f 48%, #050938 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    body {
+      /* Fixed backgrounds repaint poorly in iOS Safari; the gradient still spans
+         the full document while the html color covers rubber-band overscroll. */
+      background-attachment: scroll;
+    }
   }
 
   main {
     overflow-x: clip;
   }
 
-  ::-webkit-scrollbar { width: 8px; }
+  /* ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: var(--color-navy-900); }
   ::-webkit-scrollbar-thumb {
     border-radius: 9999px;
     background: rgb(255 255 255 / 20%);
   }
-  ::-webkit-scrollbar-thumb:hover { background: var(--color-neon-orange); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-neon-orange); } */
 }
 
 /* Registered Tailwind utilities retain the concise component API while gaining
@@ -98,10 +114,10 @@
   border: 1px solid rgb(255 255 255 / 12%);
   background: rgb(10 20 56 / 55%);
   box-shadow: 0 8px 32px rgb(0 0 0 / 35%);
-  backdrop-filter: blur(20px) saturate(160%);
+  /* backdrop-filter: blur(20px) saturate(160%); */
 
   @media (max-width: 48rem) {
-    backdrop-filter: blur(10px) saturate(160%);
+    /* backdrop-filter: blur(10px) saturate(160%); */
   }
 }
 
@@ -112,7 +128,7 @@
   backdrop-filter: blur(28px) saturate(180%);
 }
 
-@utility madar-card {
+/* @utility madar-card {
   border: 1px solid rgb(255 255 255 / 10%);
   border-block-start-color: rgb(232 98 61 / 85%);
   border-inline-start-width: 2px;
@@ -120,11 +136,11 @@
   background: rgb(6 14 42 / 88%);
   box-shadow: 0 0 24px rgb(232 98 61 / 15%), 0 16px 40px rgb(0 0 0 / 45%);
   backdrop-filter: blur(16px);
-}
+} */
 
-@utility brand-gradient {
+/* @utility brand-gradient {
   background-image: linear-gradient(135deg, var(--color-neon-orange), var(--color-brand-red-dark));
-}
+} */
 
 @utility brand-gradient-text {
   color: transparent;
@@ -146,46 +162,46 @@
   &:hover { background-color: rgb(255 255 255 / 14%); }
 }
 
-@utility transition-smooth {
+/* @utility transition-smooth {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-@utility shape { animation: var(--animate-float); }
+/* @utility shape { animation: var(--animate-float); }
 @utility shape-pulse { animation: var(--animate-shape-pulse); }
-@utility hotspot-dot { animation: var(--animate-neon-pulse); }
+@utility hotspot-dot { animation: var(--animate-neon-pulse); } */
 
-@utility neon-stroke-blue {
+/* @utility neon-stroke-blue {
   fill: none;
   stroke: var(--color-neon-blue);
   stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
   filter: drop-shadow(0 0 4px rgb(58 160 255 / 90%)) drop-shadow(0 0 12px rgb(58 160 255 / 45%));
-}
+} */
 
-@utility neon-stroke-orange {
+/* @utility neon-stroke-orange {
   fill: none;
   stroke: var(--color-neon-orange);
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
   filter: drop-shadow(0 0 4px rgb(232 98 61 / 95%)) drop-shadow(0 0 14px rgb(232 98 61 / 50%));
-}
+} */
 
-@utility truck-stage {
+/* @utility truck-stage {
   max-width: 100%;
   overflow: visible;
-}
+} */
 
-@utility hero-night {
+/* @utility hero-night {
   background:
     linear-gradient(180deg, rgb(5 11 38 / 18%), rgb(3 6 24 / 94%)),
     radial-gradient(circle at 50% 48%, #0b2b59 0%, #071431 42%, #030618 78%);
-}
+} */
 
-@utility truck-image-composite {
+/* @utility truck-image-composite {
   overflow: visible;
   isolation: isolate;
 
@@ -200,9 +216,9 @@
     mix-blend-mode: screen;
     mask-image: radial-gradient(ellipse 68% 62% at 50% 54%, black 30%, transparent 100%);
   }
-}
+} */
 
-@utility truck-image-art {
+/* @utility truck-image-art {
   filter: saturate(1.08) contrast(1.07);
   mix-blend-mode: screen;
   mask-image: radial-gradient(
@@ -213,9 +229,9 @@
     rgb(0 0 0 / 8%) 84%,
     transparent 96%
   );
-}
+} */
 
-@utility custom-cursor {
+/* @utility custom-cursor {
   position: fixed;
   z-index: 9999;
   pointer-events: none;
@@ -241,9 +257,9 @@
   }
 
   @media (max-width: 48rem) { display: none; }
-}
+} */
 
-@utility custom-cursor-ring {
+/* @utility custom-cursor-ring {
   position: fixed;
   z-index: 9998;
   pointer-events: none;
@@ -252,7 +268,7 @@
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), width 300ms cubic-bezier(0.4, 0, 0.2, 1), height 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 48rem) { display: none; }
-}
+} */
 
 @utility golden-padding-xs { padding: var(--spacing-golden-xs); }
 @utility golden-padding-sm { padding: var(--spacing-golden-sm); }

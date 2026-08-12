@@ -46,8 +46,8 @@ interface Props {
 export default function CategoryVisual({
   categoryId,
   image,
-  className = 'w-16 h-16',
-  iconClassName = 'w-8 h-8',
+  className = 'w-28 h-28',
+  iconClassName = 'w-28 h-28',
 }: Props) {
   const [imgFailed, setImgFailed] = useState(false);
   const Icon = iconMap[categoryId] ?? Wrench;
@@ -67,7 +67,7 @@ export default function CategoryVisual({
 
   return (
     <span
-      className={`${className} inline-flex items-center justify-center rounded-2xl brand-gradient text-white shadow-md`}
+      className={`${className} inline-flex items-center justify-center rounded-2xl  text-white `}
     >
       <Icon className={iconClassName} strokeWidth={1.75} />
     </span>

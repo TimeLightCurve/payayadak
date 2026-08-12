@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Poppins, Vazirmatn } from 'next/font/google';
 import CustomCursor from '@/components/CustomCursor';
 import './globals.css';
 import localFont from 'next/font/local'
+import LenisWrapper from '@/components/lenis/LenisWrapper'
 
 // Persian-first typography. Vazirmatn covers Arabic script well; Latin fallback included.
 const vazir = Vazirmatn({
@@ -69,6 +70,18 @@ export const metadata: Metadata = {
     'پایا یدک',
     'Isuzu parts',
   ],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'پایا یدک',
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#03072f',
 };
 
 export default function RootLayout({
@@ -79,8 +92,10 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={`${vazir.variable} ${poppins.className} ${nian.variable} font-sans antialiased`}>
-        <CustomCursor />
-        {children}
+        {/* <CustomCursor /> */}
+        <LenisWrapper >
+          {children}
+        </LenisWrapper>
       </body>
     </html>
   );
