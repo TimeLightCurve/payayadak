@@ -221,7 +221,7 @@ const PartHotspot = memo(function PartHotspot({
             }`}
           />
           <span
-            className={`pointer-events-none absolute min-h-32 min-w-48 text-wrap bottom-[calc(100%-1.65rem)] z-40 left-1/2 translate-x-[-120%] rounded-sm border border-white/15 bg-navy-950/35 backdrop-blur-xl font-nian px-12 py-4 text-base font-bold text-white shadow-xl  transition duration-200 ${
+            className={`pointer-events-none absolute min-h-32 min-w-48 text-wrap bottom-[calc(100%-3.65rem)] z-40 left-1/2 translate-x-[20%] rounded-sm border border-white/15 bg-navy-950/35 backdrop-blur-xl font-nian px-12 py-4 text-base font-bold text-white shadow-xl  transition duration-200 ${
               active
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100'
