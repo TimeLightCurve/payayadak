@@ -21,7 +21,7 @@ export default function SpecialOrderPage() {
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen font-nian">
       <Navbar />
       <section className="relative overflow-hidden px-4 pb-16 pt-28 sm:px-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(232,98,61,.18),transparent_35%)]" />

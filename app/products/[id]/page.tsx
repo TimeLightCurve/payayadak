@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: Props) {
   const price = samplePrices[part.id];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen font-nian">
       <Navbar />
 
       <section className="px-4 pb-16 pt-24 sm:px-6 sm:pt-28 lg:px-8">

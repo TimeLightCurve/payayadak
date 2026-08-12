@@ -15,7 +15,7 @@ export default async function ProductsPage({
   const { category, brand } = await searchParams;
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen font-nian">
       <Navbar />
       <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
