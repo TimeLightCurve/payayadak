@@ -200,8 +200,8 @@ function CameraRig({
     if (!enabled || !controls.current) return
 
     const nextX = THREE.MathUtils.damp(
-      currentOffset.current.x,
-      desiredOffset.current.x,
+      currentOffset.current.x + 0.1,
+      desiredOffset.current.x ,
       4.5,
       delta,
     )
@@ -333,7 +333,7 @@ export function ThreeCanvas() {
       const position: [number, number, number] = compact
         ? [5.8, 2.4, 15]
         : [
-            rigOffset.x,
+            rigOffset.x ,
             rigOffset.y + DESKTOP_RIG_CAMERA_Y,
             DESKTOP_RIG_CAMERA_Z,
           ]
@@ -376,7 +376,7 @@ export function ThreeCanvas() {
 
     const finalPosition: [number, number, number] = compact
       ? [5.8, 2.4, 15]
-      : [0, DESKTOP_RIG_CAMERA_Y, DESKTOP_RIG_CAMERA_Z]
+      : [1, DESKTOP_RIG_CAMERA_Y, DESKTOP_RIG_CAMERA_Z]
     const finalTarget: [number, number, number] = compact
       ? MOBILE_RIG_TARGET
       : DESKTOP_RIG_TARGET
@@ -586,6 +586,7 @@ export function ThreeCanvas() {
           lowPerformance={lowTierMobile}
           animationEnabled={sceneVisible}
           visible={sceneVisible}
+          compact={compact}
         />
         {/* <directionalLight position={[10, 10, 5]} intensity={1.5} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} /> */}
 
@@ -639,12 +640,12 @@ export function ThreeCanvas() {
         : (
           <div className="pointer-events-none absolute inset-0 z-50 flex h-[100svh] flex-col shrink-0 justify-between py-14 pb-20 md:py-28">
             <div className="pointer-events-none font-nian font-black flex flex-col h-full justify-start px-4 md:px-16 ">
-              <h1 className="pointer-events-none flex h-fit items-start  gap-3 p-2 ps-4 text-white text-3xl md:text-7xl max-w-3xl leading-relaxed">
+              <h1 className="pointer-events-none flex h-fit items-start  gap-3 p-2 ps-4 text-white text-3xl md:text-5xl lg:text-5xl xl:text-5xl md:max-w-2xl xl:max-w-3xl leading-relaxed">
                 مرجع تخصصی
                 <br />
                 قطعات یدکی ایسوزو
               </h1>
-              <p className="pointer-events-none flex items-center gap-3 p-2 ps-4 text-gray-300 text-sm md:text-lg max-w-xl leading-relaxed tracking-wider font-light">
+              <p className="pointer-events-none flex items-center gap-3 p-2 ps-4 text-gray-300 text-sm md:text-lg md:max-w-sm 2xl:max-w-xl leading-relaxed tracking-wider font-light">
                 قطعه سازگار با کامیونت و کامیون نیمه‌سنگین ایسوزو را پیدا کنید؛ موجودی، کیفیت و زمان تحویل را ببینید یا برای قطعات حساس از کارشناس کمک بگیرید
               </p>
             </div>
@@ -652,7 +653,7 @@ export function ThreeCanvas() {
               <p className="pointer-events-none max-w-3xl text-right text-base md:text-xl text-white/45">
                 نمایندگی و توزیع قطعات اصلی کامیونت و کامیون ایسوزو. اصالت کالا، مشاوره فنی، ارسال سریع به سراسر ایران.
               </p>
-              <div className="pointer-events-none mt-4 flex gap-3 bottom-0 ">
+              <div className="pointer-events-auto mt-4 flex gap-3 bottom-0 ">
                 <a
                   href="/products"
                   className="group inline-flex min-h-11 items-center justify-center gap-2 bg-[var(--neon-orange)] px-5 py-3 text-sm font-semibold text-white transition-smooth hover:brightness-110"

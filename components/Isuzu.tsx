@@ -71,6 +71,7 @@ type IsuzuProps = JSX.IntrinsicElements['group'] & {
   onReady?: () => void
   lowPerformance?: boolean
   animationEnabled?: boolean
+  compact: boolean
 }
 
 type PartHotspotProps = {
@@ -80,6 +81,7 @@ type PartHotspotProps = {
   active: boolean
   onSelect?: (focus: TruckPartFocus) => void
   onPreview?: (focus: TruckPartFocus | null) => void
+  compact: boolean
 }
 
 type HotspotDefinition = Omit<PartHotspotProps, 'active' | 'onSelect'>
@@ -175,6 +177,7 @@ const PartHotspot = memo(function PartHotspot({
   active,
   onSelect,
   onPreview,
+  compact
 }: PartHotspotProps) {
   const anchor = useRef<THREE.Group>(null)
 
@@ -187,6 +190,7 @@ const PartHotspot = memo(function PartHotspot({
   }
 
   const selectPart = () => {
+    if(!compact) return
     const focus = getFocus()
     if (focus) onSelect?.(focus)
   }
@@ -221,7 +225,7 @@ const PartHotspot = memo(function PartHotspot({
             }`}
           />
           <span
-            className={`pointer-events-none absolute min-h-32 min-w-48 text-wrap bottom-[calc(100%-3.65rem)] z-40 left-1/2 translate-x-[20%] rounded-sm border border-white/15 bg-navy-950/35 backdrop-blur-xl font-nian px-12 py-4 text-base font-bold text-white shadow-xl  transition duration-200 ${
+            className={`pointer-events-none absolute min-h-32 min-w-48 text-wrap bottom-[calc(100%-3.65rem)] z-40 left-1/2 translate-x-[20%] rounded-sm border border-white/15 bg-navy-950/5 backdrop-blur-sm font-nian px-12 py-4 text-lg font-bold text-white shadow-xl flex items-center justify-center  transition duration-200 ${
               active
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100'
@@ -240,6 +244,7 @@ export function Isuzu({
   onFocusPart,
   onPreviewPart,
   onReady,
+  compact,
   lowPerformance = false,
   animationEnabled = true,
   ...props
@@ -369,6 +374,7 @@ export function Isuzu({
               active={activePartId === hotspot.id}
               onSelect={onFocusPart}
               onPreview={onPreviewPart}
+              compact={compact}
             />
           ))}
         </group>
