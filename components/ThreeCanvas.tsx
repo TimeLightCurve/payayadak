@@ -578,7 +578,7 @@ export function ThreeCanvas() {
 
         <Isuzu
           scale={truckScale}
-          position={compact ? [-0.1, -1.65, -2] : [-1.5, -1.05, -2]}
+          position={compact ? [-0.1, -1.65, -2] : [-1.5, -1.25, -2]}
           activePartId={activePart?.id}
           onFocusPart={focusPart}
           onPreviewPart={previewPart}
@@ -592,7 +592,7 @@ export function ThreeCanvas() {
         {modelReady && !lowTierMobile && (
           <AccumulativeShadows
             visible={sceneVisible}
-            position={compact ? [-5, -1.66, 0] : [-5, -1.06, 0]}
+            position={compact ? [-5, -1.66, 0] : [-5, -1.26, 0]}
             frames={120}
             resolution={compact ? 256 : 512}
             opacity={0.9}

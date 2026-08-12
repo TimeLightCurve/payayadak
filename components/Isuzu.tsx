@@ -334,11 +334,11 @@ export function Isuzu({
     const wheelRotation = CRUISE_WHEEL_SPEED * frameTime
     if (frontWheels.current) {
       frontWheels.current.rotation.x =
-        (frontWheels.current.rotation.x - wheelRotation) % (Math.PI * 2)
+        (frontWheels.current.rotation.x + wheelRotation) % (Math.PI * 2)
     }
     if (rearWheels.current) {
       rearWheels.current.rotation.x =
-        (rearWheels.current.rotation.x - wheelRotation) % (Math.PI * 2)
+        (rearWheels.current.rotation.x + wheelRotation) % (Math.PI * 2)
     }
   })
 
