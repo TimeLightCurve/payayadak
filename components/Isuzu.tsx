@@ -71,7 +71,7 @@ type IsuzuProps = JSX.IntrinsicElements['group'] & {
   onReady?: () => void
   lowPerformance?: boolean
   animationEnabled?: boolean
-  compact: boolean
+  compact?: boolean
 }
 
 type PartHotspotProps = {
@@ -81,7 +81,7 @@ type PartHotspotProps = {
   active: boolean
   onSelect?: (focus: TruckPartFocus) => void
   onPreview?: (focus: TruckPartFocus | null) => void
-  compact: boolean
+  compact?: boolean
 }
 
 type HotspotDefinition = Omit<PartHotspotProps, 'active' | 'onSelect'>
